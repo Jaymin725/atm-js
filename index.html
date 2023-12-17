@@ -51,12 +51,12 @@
 
               <!-- Diposit -->
               <div class="col">
-                <button type="button" class="btn btn-lg btn-secondary w-100"><i class="bi bi-box-arrow-in-down"></i> Diposit</button>
+                <button type="button" class="btn btn-lg btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#diposit"><i class="bi bi-box-arrow-in-down"></i> Diposit</button>
               </div>
 
               <!-- Balance -->
               <div class="col">
-                <button type="button" class="btn btn-lg btn-secondary w-100"><i class="bi bi-cash-stack"></i> Balance</button>
+                <button type="button" class="btn btn-lg btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#balance"><i class="bi bi-cash-stack"></i> Balance</button>
               </div>
 
               <!-- Exit -->
@@ -95,7 +95,7 @@
             <!-- Input Group -->
             <div class="input-group input-group-lg">
               <span class="input-group-text">$</span>
-              <input type="number" name="balance" id="balance-input" class="form-control" value="0.00" disabled>
+              <input type="number" name="balance" id="balance_input" class="form-control" value="0.00" disabled>
             </div>
           </div>
 
@@ -115,6 +115,110 @@
         <!-- Modal Footer -->
         <div class="modal-footer">
           <button type="button" class="btn btn-primary w-100">Withdraw</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Diposit Modal -->
+  <div class="modal fade" id="diposit">
+    <!-- Modal Dialog -->
+    <div class="modal-dialog modal-dialog-centered">
+      <!-- Modal Content -->
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <!-- Modal Title -->
+          <h3 class="modal-title"><i class="bi bi-box-arrow-in-down me-1"></i> Diposit</h3>
+
+          <!-- Button Close -->
+          <button type="button" class="btn-close" data-bs-toggle="modal" data-bs-target="#atm"></button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <!-- Balance -->
+          <div>
+            <!-- Form Label -->
+            <label for="balance-input" class="form-label">Balance</label>
+            
+            <!-- Input Group -->
+            <div class="input-group input-group-lg">
+              <span class="input-group-text">$</span>
+              <input type="number" name="balance" id="balance-input" class="form-control" value="0.00" disabled>
+            </div>
+          </div>
+
+          <!-- Diposit Amount -->
+          <div class="mt-4">
+            <!-- Form Label -->
+            <label for="balance-input" class="form-label">Diposit Amount</label>
+            
+            <!-- Input Group -->
+            <div class="input-group">
+              <span class="input-group-text">$</span>
+              <input type="number" name="balance" id="balance_input" class="form-control" readonly>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary w-100">Diposit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Balance Modal -->
+  <div class="modal fade" id="balance">
+    <!-- Modal Dialog -->
+    <div class="modal-dialog modal-dialog-centered">
+      <!-- Modal Content -->
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <!-- Modal Title -->
+          <h3 class="modal-title"><i class="bi bi-box-arrow-in-down me-1"></i> Balance</h3>
+
+          <!-- Button Close -->
+          <button type="button" class="btn-close" data-bs-toggle="modal" data-bs-target="#atm"></button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <!-- Balance -->
+          <div class="mb-3">
+            <!-- Form Label -->
+            <label for="balance-input" class="form-label">Balance</label>
+            
+            <!-- Input Group -->
+            <div class="input-group input-group-lg">
+              <span class="input-group-text">$</span>
+              <input type="number" name="balance" id="balance_input" class="form-control" value="0.00" disabled>
+            </div>
+          </div>
+
+          <!-- Container -->
+          <div class="container p-0">
+            <!-- Row -->
+            <div class="row row-cols-2 g-2">
+              <!-- Withdraw -->
+              <div class="col">
+                <button type="button" class="btn btn-lg btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#withdraw"><i class="bi bi-box-arrow-up"></i> Withdraw</button>
+              </div>
+
+              <!-- Diposit -->
+              <div class="col">
+                <button type="button" class="btn btn-lg btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#diposit"><i class="bi bi-box-arrow-in-down"></i> Diposit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary w-100">Diposit</button>
         </div>
       </div>
     </div>
