@@ -23,7 +23,8 @@
       ATM</button>
   </main>
 
-  <!-- ATM Modal -->
+  <!-- Modal -->
+  <!-- - ATM -->
   <div class="modal fade" id="atm">
     <!-- Modal Dialog -->
     <div class="modal-dialog modal-dialog-centered">
@@ -69,8 +70,7 @@
       </div>
     </div>
   </div>
-
-  <!-- Withdraw Modal -->
+  <!-- - Withdraw -->
   <div class="modal fade" id="withdraw">
     <!-- Modal Dialog -->
     <div class="modal-dialog modal-dialog-centered">
@@ -95,32 +95,31 @@
             <!-- Input Group -->
             <div class="input-group input-group-lg">
               <span class="input-group-text">$</span>
-              <input type="number" name="balance" id="balance_input" class="form-control" value="0.00" disabled>
+              <input type="number" name="balance" id="balance-input" class="form-control" value="0.00" disabled>
             </div>
           </div>
 
           <!-- Withdraw Amount -->
           <div class="mt-4">
             <!-- Form Label -->
-            <label for="balance-input" class="form-label">Withdraw Amount</label>
+            <label for="withdraw-input" class="form-label">Withdraw Amount</label>
             
             <!-- Input Group -->
             <div class="input-group">
               <span class="input-group-text">$</span>
-              <input type="number" name="balance" id="balance-input" class="form-control" readonly>
+              <input type="number" name="balance" id="withdraw-input" class="form-control">
             </div>
           </div>
         </div>
 
         <!-- Modal Footer -->
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary w-100">Withdraw</button>
+          <button type="button" class="btn btn-primary w-100" onclick="withdraw();">Withdraw</button>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- Diposit Modal -->
+  <!-- - Diposit -->
   <div class="modal fade" id="diposit">
     <!-- Modal Dialog -->
     <div class="modal-dialog modal-dialog-centered">
@@ -152,25 +151,24 @@
           <!-- Diposit Amount -->
           <div class="mt-4">
             <!-- Form Label -->
-            <label for="balance-input" class="form-label">Diposit Amount</label>
+            <label for="diposit-input" class="form-label">Diposit Amount</label>
             
             <!-- Input Group -->
             <div class="input-group">
               <span class="input-group-text">$</span>
-              <input type="number" name="balance" id="balance_input" class="form-control" readonly>
+              <input type="number" name="diposit" id="diposit-input" class="form-control">
             </div>
           </div>
         </div>
 
         <!-- Modal Footer -->
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary w-100">Diposit</button>
+          <button type="button" class="btn btn-primary w-100" onclick="diposit();">Diposit</button>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- Balance Modal -->
+  <!-- - Balance -->
   <div class="modal fade" id="balance">
     <!-- Modal Dialog -->
     <div class="modal-dialog modal-dialog-centered">
@@ -195,7 +193,7 @@
             <!-- Input Group -->
             <div class="input-group input-group-lg">
               <span class="input-group-text">$</span>
-              <input type="number" name="balance" id="balance_input" class="form-control" value="0.00" disabled>
+              <input type="number" name="balance" id="balance-input" class="form-control" value="0.00" disabled>
             </div>
           </div>
 
@@ -225,7 +223,10 @@
   </div>
 
   <!-- Script -->
+  <!-- - Bootstrap 5.3.2 -->
   <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.js"></script>
+  <!-- - Custom -->
+  <script src="scripts/script.js"></script>
 </body>
 
 </html>
