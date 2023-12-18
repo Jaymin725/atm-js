@@ -47,17 +47,17 @@
             <div class="row row-cols-2 g-2">
               <!-- Withdraw -->
               <div class="col">
-                <button type="button" class="btn btn-lg btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#withdraw"><i class="bi bi-box-arrow-up"></i> Withdraw</button>
+                <button type="button" class="btn btn-lg btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#withdraw" onclick="setBalance(null);"><i class="bi bi-box-arrow-up"></i> Withdraw</button>
               </div>
 
               <!-- Diposit -->
               <div class="col">
-                <button type="button" class="btn btn-lg btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#diposit"><i class="bi bi-box-arrow-in-down"></i> Diposit</button>
+                <button type="button" class="btn btn-lg btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#diposit" onclick="setBalance(null);"><i class="bi bi-box-arrow-in-down"></i> Diposit</button>
               </div>
 
               <!-- Balance -->
               <div class="col">
-                <button type="button" class="btn btn-lg btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#balance"><i class="bi bi-cash-stack"></i> Balance</button>
+                <button type="button" class="btn btn-lg btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#balance" onclick="setBalance(null);"><i class="bi bi-cash-stack"></i> Balance</button>
               </div>
 
               <!-- Exit -->
@@ -95,7 +95,7 @@
             <!-- Input Group -->
             <div class="input-group input-group-lg">
               <span class="input-group-text">$</span>
-              <input type="number" name="balance" id="balance-input" class="form-control" value="0.00" disabled>
+              <input type="number" name="balance" id="balance-input" class="form-control" disabled>
             </div>
           </div>
 
@@ -144,7 +144,7 @@
             <!-- Input Group -->
             <div class="input-group input-group-lg">
               <span class="input-group-text">$</span>
-              <input type="number" name="balance" id="balance-input" class="form-control" value="0.00" disabled>
+              <input type="number" name="balance" id="balance-input" class="form-control" disabled>
             </div>
           </div>
 
@@ -186,37 +186,35 @@
         <!-- Modal Body -->
         <div class="modal-body">
           <!-- Balance -->
-          <div class="mb-3">
+          <div>
             <!-- Form Label -->
             <label for="balance-input" class="form-label">Balance</label>
             
             <!-- Input Group -->
             <div class="input-group input-group-lg">
               <span class="input-group-text">$</span>
-              <input type="number" name="balance" id="balance-input" class="form-control" value="0.00" disabled>
-            </div>
-          </div>
-
-          <!-- Container -->
-          <div class="container p-0">
-            <!-- Row -->
-            <div class="row row-cols-2 g-2">
-              <!-- Withdraw -->
-              <div class="col">
-                <button type="button" class="btn btn-lg btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#withdraw"><i class="bi bi-box-arrow-up"></i> Withdraw</button>
-              </div>
-
-              <!-- Diposit -->
-              <div class="col">
-                <button type="button" class="btn btn-lg btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#diposit"><i class="bi bi-box-arrow-in-down"></i> Diposit</button>
-              </div>
+              <input type="number" name="balance" id="balance-input" class="form-control" disabled>
             </div>
           </div>
         </div>
 
         <!-- Modal Footer -->
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary w-100">Diposit</button>
+          <!-- Container -->
+          <div class="container p-0">
+            <!-- Row -->
+            <div class="row row-cols-2 g-2">
+              <!-- Withdraw -->
+              <div class="col">
+                <button type="button" class="btn btn-lg btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#withdraw" onclick="setBalance(null);"><i class="bi bi-box-arrow-up"></i> Withdraw</button>
+              </div>
+
+              <!-- Diposit -->
+              <div class="col">
+                <button type="button" class="btn btn-lg btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#diposit" onclick="setBalance(null);"><i class="bi bi-box-arrow-in-down"></i> Diposit</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
