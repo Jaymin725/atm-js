@@ -19,11 +19,45 @@
 <body data-bs-theme="dark">
   <!-- Main -->
   <main class="container vh-100 d-flex">
-    <button type="button" class="btn btn-lg btn-primary m-auto" data-bs-toggle="modal" data-bs-target="#atm">Start
+    <button type="button" class="btn btn-lg btn-primary m-auto" data-bs-toggle="modal" data-bs-target="#login">Start
       ATM</button>
   </main>
 
   <!-- Modal -->
+  <!-- - Login -->
+  <div class="modal fade" id="login">
+    <!-- Modal Dialog -->
+    <div class="modal-dialog modal-dialog-centered">
+      <!-- Modal Content -->
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <!-- Modal Title -->
+          <h3 class="modal-title"><i class="bi bi-file-lock2 me-1"></i> Login</h3>
+
+          <!-- Button Close -->
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="username" value="Jaymin725">
+            <label for="username">Email address</label>
+          </div>
+          <div class="form-floating">
+            <input type="password" class="form-control" id="password" value="atm@123">
+            <label for="password">Password</label>
+          </div>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary w-100" onclick="login();" data-bs-dismiss="modal">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- - ATM -->
   <div class="modal fade" id="atm">
     <!-- Modal Dialog -->
