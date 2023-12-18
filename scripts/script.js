@@ -1,5 +1,19 @@
 var balance = null;
 
+// Login
+function login() {
+  const username = document.getElementById("username");
+  const password = document.getElementById("password");
+
+  if (username.value == "Jaymin725" && password.value == "atm@123") {
+    const atmModal = new bootstrap.Modal('#atm');
+    atmModal.show();
+  } else {
+    alert("Invalid username or password!");
+  }
+}
+
+// Set Balance
 function setBalance(bal) {
   const balanceInput = document.querySelectorAll("#balance-input");
   console.log(balanceInput);
